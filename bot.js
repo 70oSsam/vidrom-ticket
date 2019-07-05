@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('message', async message => {
  
-   if (message.content.startsWith("$new")) {  
+   if (message.content.startsWith("-new")) {  
         const reason = message.content.split(" ").slice(1).join(" ");  
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`áÇÒã ÊÓæí ÑÊÈÉ ÇÓãåÇ \`Support Team\` æÊäØí ÇáÈæÊ ÇÏãäíÊÑ ÍÊÇ íÞÏÑ íÓæí ÇáÑæãÇÊ æíÚÏá ÈÑãÔäÇÊ`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
